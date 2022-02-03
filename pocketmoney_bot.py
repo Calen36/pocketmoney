@@ -37,7 +37,7 @@ def helpinfo(message):
 
 
 @bot.message_handler(commands=['reset',])
-def helpinfo(message):
+def reset_dialog(message):
     if message.chat.id in ALLOWED_IDS:
         item1 = telebot.types.InlineKeyboardButton('Отмена', callback_data='cancel')
         item2 = telebot.types.InlineKeyboardButton('УДАЛИТЬ ДАННЫЕ', callback_data='reset_data')
